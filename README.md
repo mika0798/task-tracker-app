@@ -16,10 +16,10 @@ Backend developer implements controllers, services and datasource management, ha
 - PostgreSQL
 - H2 (for testing)
 
-## 4. ERD
+## 4. Database ERD
 ![ERD.png](media/ERD.png)
 
-## 5. Entity Diagram
+## 5. POJO ERD
 ![entitydiagram.png](media/entitydiagram.png)
 
 ## 6. Endpoints
