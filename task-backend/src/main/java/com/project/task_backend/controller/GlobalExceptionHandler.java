@@ -1,6 +1,6 @@
 package com.project.task_backend.controller;
 
-import com.project.task_backend.domain.ErrorResponse;
+import com.project.task_backend.domain.dto.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

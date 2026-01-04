@@ -1,4 +1,4 @@
-package com.project.task_backend.domain;
+package com.project.task_backend.domain.dto;
 
 public record ErrorResponse(
         int status,
