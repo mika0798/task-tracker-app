@@ -58,9 +58,9 @@ public class TaskListMapperImpl implements TaskListMapper {
         if(null == tasks) {
             return null;
         }
-        long closeTaskCount = tasks.stream()
+        long closedTaskCount = tasks.stream()
                 .filter(task -> TaskStatus.CLOSED == task.getStatus())
                 .count();
-        return (double) closeTaskCount / tasks.size();
+        return (double) closedTaskCount / tasks.size();
     }
 }
