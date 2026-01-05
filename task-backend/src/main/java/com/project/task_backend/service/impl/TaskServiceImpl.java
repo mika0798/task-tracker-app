@@ -48,7 +48,7 @@ public class TaskServiceImpl implements TaskService {
         TaskList taskList = taskListRepository
                 .findById(taskListId)
                 .orElseThrow(() ->
-                        new IllegalArgumentException("Could not find TaskList with id " + taskListId));
+                        new ResourceNotFoundException("Could not find TaskList with id " + taskListId));
 
         LocalDateTime now = LocalDateTime.now();
         return taskRepository.save(new Task(
@@ -80,7 +80,7 @@ public class TaskServiceImpl implements TaskService {
         }
 
         Task existingTask = taskRepository.findByTaskListIdAndId(taskListId,taskId)
-                .orElseThrow(() -> new IllegalStateException("Task not found!"));
+                .orElseThrow(() -> new ResourceNotFoundException("Task not found!"));
 
         existingTask.setTitle(task.getTitle());
         existingTask.setDescription(task.getDescription());
